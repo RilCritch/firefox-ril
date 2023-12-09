@@ -1,0 +1,44 @@
+/*** == == Universal Setup == == ***/
+
+
+/* URL page action buttons appear on hover */
+@import "./css/universal/page_action_button_on_hover.css";
+
+#sidebar-header {
+    display: none !important;
+}
+
+/* #sidebar-box { */
+/*     width: 20vw; */
+/* } */
+
+.urlbar-input-box, .searchbar-textbox {
+    text-align: center;
+}
+
+
+.sidebar-splitter {
+  width: 3px !important;
+  background-color: #1E2326 !important;
+  border: 0px !important;
+}
+
+/*** == == Testing == == ***/
+
+/* @import "./css/hide_tab_toolbar.css"; */
+#main-window[tabsintitlebar="true"]:not([extradragspace="true"]) #TabsToolbar > .toolbar-items {
+  opacity: 0;
+  pointer-events: none;
+}
+#main-window:not([tabsintitlebar="true"]) #TabsToolbar {
+    visibility: collapse !important;
+}
+
+/*** == == One Liner Setup == == ***/
+
+/* Moves tabs to main toolbar on the right */
+/* @import "./css/navbar_tabs_responsive_oneliner.css"; */
+/* @import "./css/combined_tabs_tabs_main_toolbars.css"; /* dynamic based on # of tabs */ */
+
+/* This makes tabs only be icons */
+/* @import "./css/icon_only_tabs.css"; */
