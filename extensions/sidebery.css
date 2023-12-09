@@ -1,0 +1,115 @@
+#root.root {--search-font-size: 0.9450rem;}
+#root.root {--search-icon-width: 40px;}
+#root.root {--search-border-radius: 6px;}
+#root.root {--search-height: 42px;}
+#root.root {--nav-btn-active-shadow: inset 0 0 0px 1px #7FBBB3;}
+#root.root {--frame-el-overlay-hover-bg: #343F44;}
+#root.root {--frame-el-overlay-selected-bg: #3D484D;}
+#root.root {--tabs-font: 1.01rem Ubuntu Nerd Font;}
+#root.root {--tabs-activated-fg: #232A2E;}
+#root.root {--frame-bg: #232A2E;}
+
+#root.root {--bookmarks-margin: 6px;}
+#root.root {--tabs-normal-fg: #859289;}
+#root.root {--tabs-activated-bg: #83C092;}
+
+#root.root {--tabs-progress-bg: #DBBC7F;}
+#root.root {--tabs-pinned-height: 33px;}
+
+#root.root {--tabs-pinned-width: 33px;}
+#root.root {--tabs-height: 33px;}
+#root.root {--tabs-margin: 9px;}
+#root.root {--tabs-indent: 15px;}
+
+#root.root {--tabs-border-radius: 6px;}
+
+#root.root {--tabs-close-btn-margin: 4px;}
+#root.root {--nav-btn-border-radius: 6px;}
+#root.root {--nav-btn-len-margin: 2px;}
+#root.root {--nav-hidden-panels-popup-margin: px;}
+
+#root.root {--nav-btn-width: 36px;}
+#root.root {--nav-btn-height: 36px;}
+#root.root {--nav-btn-margin: 6px;}
+
+
+#root.root {--frame-fg: #859289;}
+
+
+#root.root {--frame-el-overlay-selected-border: #7FBBB3;}
+#root.root {--toolbar-bg: #1E2326;}
+#root.root {--toolbar-fg: #9DA9A0;}
+#root.root {--general-border-radius: 6px;}
+#root.root {--general-margin: 4px;}
+
+/*** Custom Styles ***/
+
+/* Regular Tabs */
+.Tab .body {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  transition: opacity var(--d-fast),transform var(--d-fast);
+  border-radius: var(--tabs-border-radius);
+  background-color: #272E33;
+  box-shadow: 0 0px 1px 0px #1E2326, inset 0 0 10px 2px #2D353B;
+}
+
+/* Disable Fav Icons */
+.Tab .fav {
+	opacity: 0;
+	width: 0px;
+}
+
+/* New Tab Button */
+.TabsPanel .new-tab-btns {
+	padding: 5px;
+	background-color: #1E2326;
+	/* box-shadow: inset 0 0 20px 0px #1E2326; */
+}
+.TabsPanel .new-tab-btn:hover::before {
+  background-color: #83C092;
+	text-color: #232A2E;
+}
+.TabsPanel .new-tab-btn:hover > svg, .TabsPanel .new-tab-btn > img {
+  fill: #1E2326;
+}
+
+/* Navigation Bar */
+
+.NavigationBar.-vert {
+  width: 48px;
+	padding: 6px;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100%;
+}
+
+/* Active Tabs */
+.Tab[data-active="true"] .body {
+  background-color: var(--tabs-activated-bg);
+  /*box-shadow: 0 0px 1px 1px #1E2326, inset 0 0 0px 2px #83C092;*/
+  box-shadow: 0 0px 1px 1px #161a1d, inset 0 0 9px -1px #bbddc4;
+}
+
+/* Multiline Tabs */
+#root {
+  --tabs-height: 42px !important;
+  --tabs-title-padding: 0px;
+  --tabs-font-size: 0.9rem;
+  --tabs-title-lines: 2;
+}
+
+.Tab .t-box {
+  align-items: center;
+  max-height: calc(var(--tabs-height) - var(--tabs-title-padding));
+  overflow: hidden;
+}
+
+.Tab .title {
+  font-size: var(--tabs-font-size);
+  white-space: pre-wrap;
+  line-height: calc((var(--tabs-height) - var(--tabs-title-padding)) / var(--tabs-title-lines));
+}
