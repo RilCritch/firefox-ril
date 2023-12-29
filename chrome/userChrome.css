@@ -2,7 +2,7 @@
 
 
 /* URL page action buttons appear on hover */
-@import "./css/universal/page_action_button_on_hover.css";
+/* @import "./css/universal/page_action_button_on_hover.css"; */
 
 #sidebar-header {
     display: none !important;
@@ -21,6 +21,21 @@
   width: 3px !important;
   background-color: #1E2326 !important;
   border: 0px !important;
+}
+
+/*** == == Center Toolbar Items == == ***/
+#PlacesToolbarItems { /* Bookmarks toolbar*/
+  display: flex;
+  justify-content: center;
+}
+
+.toolbaritem-combined-buttons:not([widget-type="button-and-view"], [widget-type="custom"]), .toolbaritem-menu-buttons { /* Center the Zoom Controls */
+  margin-inline-end: 2px !important;
+}
+
+/*** == == Colors == == ***/
+#pageAction-urlbar-tab-stash-condordes_net {
+    display: none !important;
 }
 
 /*** == == Testing == == ***/
